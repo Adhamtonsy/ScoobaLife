@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style.css" />
+    <title>Services</title>
+  </head>
+  <body>
+    <nav id="nav">
+      <img src="Assets/Logo.png " alt="image not found" id="logo"/>
+      <ul class="nav-item" id="nav-item">
+        <li id="item-1"><a href="index.html">Home</a></li>
+        <li id="item-2"><a href="Services.html">Services</a></li>
+        <li id="item-3"><a href="Products.html">Products</a></li>
+        <li id="item-4"><a href="Packages.html">Packages</a></li>
+        <li id="item-5"><a href="About Us.html">About Us</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <div class="header">
+        <div class="title-course">
+          <h1>Contact</h1>
+          <h4><a href="">Scooba Life</a></h4>
+        </div>
+      </div>
+      <div class="title" id="title">
+        <h2>About</h2>
+      </div>
+      <div class="about-descripiton" id="about-desc">
+        <h2 id="about-title">Scuba Diving:</h2>
+
+        <p id="about-pragh-1">
+          <strong>SCUBA PLUS</strong> is a Cairo based diving center & club,
+          established since 1992. <br />
+          <strong>SCUBA PLUS</strong> is Cairo”s first PADI 5 STAR IDC Center,
+          as well as a SDI/TDI (Technical Diving International) facility ,
+          always putting safety and quality of diver education iat the forefront
+          of our priorities.
+        </p>
+        <p id="about-pragh-2">
+          <strong>SCUBA PLUS</strong> is always well stocked with a great
+          variety of diving equipment and accessories offering great value for
+          money, we are an authorized dealer for
+          <strong>Aqua Lung, Apeks, XDEEP</strong> and
+          <strong>Orcatorch</strong> offering top quality products.
+        </p>
+      </div>
+     
+<section class="contact-us" id="contact-us">
+      <div class="map" id="map" style="width: 30%; margin-left: 20%;
+       margin-bottom: 20px;"> 
+        <h2>WORKING HOURS</h2>
+      <h4 style="margin-bottom: 30px">Sat - Thu 09:00 - 21:00. Friday CLOSED</h4>
+        <iframe
+          width="300"
+          height="200"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          src="https://maps.google.com/maps?width=300&amp;height=200&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          ><a href="https://www.maps.ie/distance-area-calculator.html"
+            >measure area map</a
+          ></iframe
+        >
+      </div>
+      <div class="contact-container">
+        <h2>
+            WRITE US A MESSAGE OR APPLY HERE
+        </h2>
+        <div class="inputs">
+        <div class="personal-data">
+          <input type="text" name="" id="name" placeholder="Full Name">
+        <input type="email" placeholder="Email" id="email">
+      </div>
+        <span><input type="text" value="" placeholder="subject" id="subject"></span><br>
+        <textarea name="" cols="30" rows="10" id="message"></textarea>
+      </div>
+      <div class="contact-button">
+      <h5>Fields with * are required.</h5>
+      <button onclick="checkInput()">SEND MESSAGE</button>
+    </div>
+      </div>
+
+      
+
+    </section>
+    <div class="book-btn"><button>Book Now</button></div>
+    
+    </section>
+
+    <footer>
+      <div class="footer-top">
+          <div class="container">
+              <div class="row">
+                <div class="home-central" id="central">
+                  <img id="footer-img" src="Assets/Logo.png" alt="image not found">
+                  <img id="footer-img" src="Assets/30imag.png" alt="image not found">
+                  <div class="contect" id="contect">
+                   <h3><i class=""></i>CONTACT INFO</h3>
+                   <ul>
+                      <li>40 Michael Bakhoum, Giza, Egypt</li>
+                      <li>+20 2374 80818</li>
+                      <li>+20 100 397 9173</li>
+                      <li>info@Scooba-Life.com</li>
+                   </ul>
+                  </div>
+                  <div class="email">
+                   <h3><i class=""></i>Newsletter</h3>
+                   <label for="Email">Email</label><br>
+                   <input type="email" name="Email" id="input-email"><br>
+                      <input type="button" value="Submit">
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <script>
+    function checkInput() {
+  var input_name = document.getElementById("name").value;
+  var input_email = document.getElementById("email").value;
+  var input_subject = document.getElementById("subject").value;
+  var input_msg = document.getElementById("message").value;
+
+  if (
+    input_name == "" ||
+    input_email == "" ||
+    input_subject == "" ||
+    input_msg == ""
+  ) {
+    alert("Please enter fill all data");
+    return false;
+  } else {
+    alert("Message Sent");
+  }
+  return true;
+}
+
+
+    /* Storing user's device details in a variable*/
+    let details = navigator.userAgent;
+    
+    /* Creating a regular expression 
+    containing some mobile devices keywords 
+    to search it in details string*/
+    let regexp = /android|iphone|kindle|ipad/i;
+    
+    /* Using test() method to search regexp in details
+    it returns boolean value*/
+    let isMobileDevice = regexp.test(details);
+    
+    if (isMobileDevice) {
+      console.log("Moblie Done");
+      document.getElementById("logo").style.width = "20%";
+      document.getElementById("logo").style.top = "20px";
+     
+    
+      document.getElementById("nav-item").style.width = "70%";
+      document.getElementById("nav-item").style.height = "40px";
+      document.getElementById("item-1").style.fontSize = "0.8em";
+      document.getElementById("item-2").style.fontSize = "0.8em";
+      document.getElementById("item-3").style.fontSize = "0.8em";
+      document.getElementById("item-4").style.fontSize = "0.8em";
+      document.getElementById("item-5").style.fontSize = "0.8em";
+      document.getElementById("central").style.flexWrap = "nowrap";
+      document.getElementById("contect").style.width = "auto";
+      document.getElementById("contect").style.fontSize = "0.8em";
+      document.getElementById("input-email").style.width = "100%";
+  document.getElementById("footer-img").style.height = "40px";
+   
+      // -- GENERAL
+    
+    
+    
+      document.getElementById("about-desc").style.display = "block";
+      document.getElementById("about-title").style.height = "30px";
+      document.getElementById("about-pragh-1").style.width = "100%";
+      document.getElementById("about-pragh-2").style.width = "100%";
+      document.getElementById("title").style.width = "25%";
+      document.getElementById("contact-us").style.display = "block";
+      document.getElementById("contact-us").style.marginLeft = "30px";
+      document.getElementById("map").style.marginLeft = "0px";
+
+     
+    } else {
+      console.log("You are using Desktop");
+    }
+    
+    
+    
+    
+    
+    
+    </script>
+ 
+  </body>
+</html>
