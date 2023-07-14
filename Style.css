@@ -345,6 +345,7 @@ footer {
 }
 .footer-top .row .home-central h3{
     margin: 10px;
+    position: unset;
 
 }
 .footer-top img{
